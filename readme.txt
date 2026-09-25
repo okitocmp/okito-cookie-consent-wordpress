@@ -1,95 +1,108 @@
 === Okito Cookie Consent ===
 Contributors: okitoapp
-Tags: cookies, gdpr, consent, privacy, compliance
+Tags: cookie consent, cookie banner, gdpr, google consent mode, ccpa
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Professional cookie consent management with GDPR, CCPA, LGPD, and IAB TCF v2.3 compliance. Connects your site to the Okito platform.
+Cookie consent banner for GDPR, CCPA, KVKK and LGPD with Google Consent Mode v2, IAB TCF v2.3, WP Consent API and geo-targeting. Free plan.
 
 == Description ==
 
-Okito Cookie Consent is a lightweight WordPress plugin that connects your website to the **Okito** cookie consent platform. A single CDN script handles banner display, consent management, Google Consent Mode v2, IAB TCF v2.3, the WP Consent API, and automatic language detection.
+**Okito Cookie Consent** adds a customizable cookie consent banner to your WordPress site and keeps Google Analytics, Google Ads and your other tags in line with each visitor's choice. It helps you meet the GDPR, UK GDPR, ePrivacy, CCPA/CPRA and other US state privacy laws, Brazil's LGPD and Türkiye's KVKK.
 
-= How it works =
+You design the banner in the Okito dashboard; the plugin connects your site with one click and loads a single asynchronous script. No coding and no theme changes are needed.
 
-1. Install the plugin
-2. Get your **Website Key** from [app.okito.com](https://app.okito.com)
-3. Paste the key into Settings and save — or simply click **Connect with Okito** in Okito → Settings, sign in and pick your site
+= Why Okito =
 
-The plugin injects a single `script` tag into your site's `head`. Banner rendering is handled by Okito's script, not by PHP on your server.
+* **Google Consent Mode v2** — ad_storage, analytics_storage, ad_user_data and ad_personalization are set before your Google tags run and updated the moment a visitor decides. Works with Google Analytics 4, Google Ads, Google Tag Manager and Site Kit by Google.
+* **IAB TCF v2.3** — registered IAB Europe CMP (ID 508) with the full `__tcfapi`, Google Additional Consent (AC string) and Google's `enableAdvertiserConsentMode`, for sites that run AdSense, Ad Manager or programmatic ads.
+* **WP Consent API** — every choice is passed to the WP Consent API, so Site Kit and other compatible plugins follow it automatically.
+* **Geo-targeting by privacy law** — show the banner only where consent is required (EEA, UK, Switzerland, Türkiye, Brazil and similar) and keep measurement on elsewhere.
+* **US privacy** — opt-out notice with a "Do Not Sell or Share My Personal Information" link, the IAB US Privacy API (`__uspapi`) and Global Privacy Control (GPC) support.
+* **Automatic script blocking** — tracking scripts wait until the visitor consents to their category.
+* **Cookie scanner** — Okito scans your site and sorts cookies into categories for your cookie policy.
+* **Consent records** — every decision is logged as proof of consent.
+* **50+ languages** — the banner speaks your visitor's language automatically.
 
-= Key features =
+= Built for WordPress =
 
-* Full compliance — GDPR, CCPA, LGPD, IAB TCF v2.3
-* Single async CDN script in the document head
-* Visual banner builder in the Okito dashboard
-* Automatic language detection (many languages)
-* Google Consent Mode v2 integration
-* WP Consent API integration (Site Kit and other compatible plugins follow the visitor's choice)
-* Works with caching and optimization plugins (WP Rocket, LiteSpeed Cache, Autoptimize, SiteGround Optimizer, W3 Total Cache, Cloudflare)
-* Site Health checks for common consent setup problems
-* Analytics and consent metrics in the Okito dashboard
-* Cookie scanning and categorization via Okito
-* Responsive banner layout
-* Optional script blocking until consent (configured in Okito)
+* **Connect with Okito** — sign in, pick your site and the banner is live. No key to copy.
+* **Fast** — one small asynchronous script. Nothing is rendered by PHP, so your pages stay light.
+* **Caching and optimization friendly** — works with WP Rocket, LiteSpeed Cache, Autoptimize, SiteGround Optimizer, W3 Total Cache and Cloudflare; the consent scripts are never delayed, combined or deferred.
+* **Site Health checks** — Tools → Site Health warns you about a second cookie plugin, a missing WP Consent API, Site Kit's Consent Mode setting and Google tags that load before your consent defaults.
+* **Debug mode** — add `?okito_debug=1` to any URL to see whether the consent defaults load before your Google tags.
 
-= Pricing =
+= Free plan =
 
-Okito offers several plans including a free tier. See [pricing on app.okito.com](https://app.okito.com/pricing) for current options.
+Start free and upgrade when you need more websites or advanced features. See [Okito pricing](https://app.okito.com/pricing).
 
 == Installation ==
 
-= Automatic =
+= Install =
 
-1. Go to Plugins → Add New
-2. Search for "Okito Cookie Consent"
-3. Click Install Now, then Activate
+1. In WordPress, go to **Plugins → Add New**, search for **Okito Cookie Consent**, then click **Install Now** and **Activate**.
+2. Or upload the ZIP under **Plugins → Add New → Upload Plugin**.
 
-= Manual =
+= Connect your site =
 
-1. Upload the plugin folder to `/wp-content/plugins/`, or upload the ZIP under Plugins → Add New → Upload Plugin
-2. Activate the plugin through the Plugins screen
+1. Go to **Okito → Settings**.
+2. Click **Connect with Okito**, sign in (or create a free account) and choose your website.
+3. You are sent back to WordPress with the cookie banner enabled.
 
-= Setup =
+Prefer to do it by hand? Copy the Website Key from the Okito dashboard, paste it into **Okito → Settings**, enable the banner and save.
 
-1. Go to **Okito → Settings** in WordPress admin
-2. Enter your Website Key from [app.okito.com/login](https://app.okito.com/login)
-3. Enable the cookie consent banner and save
+= Recommended =
+
+* Install the **WP Consent API** plugin so other plugins follow the visitor's choice.
+* Using Site Kit by Google? Turn on **Consent Mode** under Site Kit → Settings → Admin Settings.
+* Check **Tools → Site Health** for Okito's setup checks.
 
 == Frequently Asked Questions ==
 
-= Do I need an Okito account? =
+= How do I add a cookie consent banner to WordPress? =
 
-Yes. Create an account at [app.okito.com](https://app.okito.com) to obtain a Website Key.
+Install Okito Cookie Consent, click **Connect with Okito** in Okito → Settings and choose your website. The banner appears on your site right away; change its design, texts and languages in the Okito dashboard.
 
-= Will this slow down my website? =
+= Does Okito support Google Consent Mode v2? =
 
-The plugin adds one asynchronous script tag. Heavy work runs in the browser and on Okito's infrastructure.
+Yes. Consent Mode v2 defaults (ad_storage, analytics_storage, ad_user_data, ad_personalization) are set before your Google tags load and updated as soon as the visitor makes a choice, in both basic and advanced setups.
 
-= Where do I customize the banner? =
+= Does it work with Google Tag Manager and Site Kit? =
 
-In the Okito dashboard (for example the banner builder). Changes apply to your site according to your Okito configuration.
+Yes. Keep your Google Tag Manager container or Site Kit as it is: Okito's defaults load first in the page head. Site Kit also reads the visitor's choice through the WP Consent API.
+
+= Is Okito an IAB TCF CMP? =
+
+Yes. Okito is registered with IAB Europe as CMP ID 508 and supports TCF v2.3, including the Google Additional Consent string.
+
+= Can I show the banner only in the EU? =
+
+Yes. With geo-targeting the banner opens only where a consent law requires it, and measurement stays on for visitors from other regions.
+
+= Will the plugin slow down my website? =
+
+No. It loads one asynchronous script; the banner is rendered in the visitor's browser, not by PHP on your server.
 
 = Is it compatible with caching plugins? =
 
-Yes. It is a standard script include and works with common caching setups.
+Yes. Okito tells WP Rocket, LiteSpeed Cache, Autoptimize, SiteGround Optimizer, W3 Total Cache and Cloudflare Rocket Loader to leave its consent scripts alone, so they are never delayed, combined or deferred.
 
-= Does it support Google Consent Mode v2? =
+= Do I need an Okito account? Is there a free plan? =
 
-Yes, when configured in your Okito account.
+Yes, the banner is managed in an Okito account. You can create one for free while connecting the plugin.
 
-= Does the plugin add promotional links on my public site? =
+= Does the plugin add links or branding to my site? =
 
-The plugin itself only outputs the consent script and optional HTML comments identifying the integration. Any visible branding inside the banner is controlled in your Okito dashboard and should follow your compliance settings.
+The plugin only adds the consent script. What appears inside the banner is set in your Okito dashboard.
 
 == Screenshots ==
 
 1. WordPress admin dashboard with status and quick actions
-2. Settings page with Website Key field
+2. Settings page with Connect with Okito and the Website Key field
 3. Cookie banner and related tools in the Okito web application
 
 == External services ==
@@ -139,6 +152,10 @@ Suggested wording for your Privacy Policy is available in WordPress under **Sett
 
 == Changelog ==
 
+= 1.1.2 =
+
+* IAB TCF stub in the page head: the TCF API (__tcfapi) is available before Google tags run, even when they load before the Okito banner script
+
 = 1.1.1 =
 
 * WP Rocket "Delay JavaScript": the WP Consent API and Site Kit's Consent Mode script are no longer delayed until the first interaction, so Site Kit receives the visitor's choice right away
@@ -176,6 +193,10 @@ Suggested wording for your Privacy Policy is available in WordPress under **Sett
 * Suggested privacy policy text for the site Privacy Policy page
 
 == Upgrade Notice ==
+
+= 1.1.2 =
+
+Recommended for IAB TCF sites: Google tags find the TCF API from the first moment.
 
 = 1.1.1 =
 

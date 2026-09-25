@@ -60,6 +60,11 @@ class Okito_Public
         ?>
 <!-- Okito Consent Mode -->
 <script data-cfasync="false" data-no-optimize="1" data-no-defer="1" data-no-minify="1" nowprocket>
+  // IAB TCF stub: __tcfapi exists before Google tags; the Okito script takes over.
+  (function(){var w=window;if(typeof w.__tcfapi==="function")return;var q=[];
+  w.__tcfapi=function(){var a=arguments;if(!a.length)return q;if(a[0]==="ping"&&typeof a[2]==="function"){a[2]({gdprApplies:undefined,cmpLoaded:false,cmpStatus:"stub",apiVersion:"2.2"},true);}else{q.push(a);}};w.__tcfapi.a=q;
+  (function f(){if(w.frames.__tcfapiLocator)return;if(document.body){var i=document.createElement("iframe");i.name="__tcfapiLocator";i.style.display="none";document.body.appendChild(i);}else{setTimeout(f,5);}})();
+  w.__okitoTcfApiBridgeBound=true;w.addEventListener("message",function(e){var s=typeof e.data==="string",p;try{p=s?JSON.parse(e.data):e.data;}catch(x){return;}var c=p&&p.__tcfapiCall;if(!c)return;w.__tcfapi(c.command,c.version,function(r,ok){var m={__tcfapiReturn:{returnValue:r,success:ok,callId:c.callId}};if(e.source)e.source.postMessage(s?JSON.stringify(m):m,"*");},c.parameter);},false);})();
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('consent', 'default', {
