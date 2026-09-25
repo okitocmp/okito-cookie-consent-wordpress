@@ -57,6 +57,12 @@ class Okito_Public
         if (is_admin()) {
             return;
         }
+        /**
+         * Basic Consent Mode (Okito Banner Builder → Google tags → Basic):
+         * return false to print only the IAB TCF stub, without Consent Mode
+         * default commands.
+         */
+        $okito_consent_defaults = (bool) apply_filters('okito_print_consent_mode_defaults', true);
         ?>
 <!-- Okito Consent Mode -->
 <script data-cfasync="false" data-no-optimize="1" data-no-defer="1" data-no-minify="1" nowprocket>
@@ -65,6 +71,7 @@ class Okito_Public
   w.__tcfapi=function(){var a=arguments;if(!a.length)return q;if(a[0]==="ping"&&typeof a[2]==="function"){a[2]({gdprApplies:undefined,cmpLoaded:false,cmpStatus:"stub",apiVersion:"2.2"},true);}else{q.push(a);}};w.__tcfapi.a=q;
   (function f(){if(w.frames.__tcfapiLocator)return;if(document.body){var i=document.createElement("iframe");i.name="__tcfapiLocator";i.style.display="none";document.body.appendChild(i);}else{setTimeout(f,5);}})();
   w.__okitoTcfApiBridgeBound=true;w.addEventListener("message",function(e){var s=typeof e.data==="string",p;try{p=s?JSON.parse(e.data):e.data;}catch(x){return;}var c=p&&p.__tcfapiCall;if(!c)return;w.__tcfapi(c.command,c.version,function(r,ok){var m={__tcfapiReturn:{returnValue:r,success:ok,callId:c.callId}};if(e.source)e.source.postMessage(s?JSON.stringify(m):m,"*");},c.parameter);},false);})();
+<?php if ($okito_consent_defaults) : ?>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('consent', 'default', {
@@ -92,6 +99,7 @@ class Okito_Public
   });
   gtag('set', 'ads_data_redaction', true);
   gtag('set', 'developer_id.dZGJiMm', true);
+<?php endif; ?>
 </script>
 <!-- End Okito Consent Mode -->
         <?php

@@ -4,7 +4,7 @@ Tags: cookie consent, cookie banner, gdpr, google consent mode, ccpa
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,7 +69,7 @@ Install Okito Cookie Consent, click **Connect with Okito** in Okito → Settings
 
 = Does Okito support Google Consent Mode v2? =
 
-Yes. Consent Mode v2 defaults (ad_storage, analytics_storage, ad_user_data, ad_personalization) are set before your Google tags load and updated as soon as the visitor makes a choice, in both basic and advanced setups.
+Yes. Consent Mode v2 defaults (ad_storage, analytics_storage, ad_user_data, ad_personalization) are set before your Google tags load and updated as soon as the visitor makes a choice (advanced Consent Mode). For basic Consent Mode, choose Google tags → Basic in the Okito Banner Builder and add `add_filter( 'okito_print_consent_mode_defaults', '__return_false' );` to your theme or a small plugin: Okito then sends no Consent Mode commands and keeps Google tags blocked until the visitor consents.
 
 = Does it work with Google Tag Manager and Site Kit? =
 
@@ -152,6 +152,10 @@ Suggested wording for your Privacy Policy is available in WordPress under **Sett
 
 == Changelog ==
 
+= 1.1.3 =
+
+* New `okito_print_consent_mode_defaults` filter: return false to skip the Consent Mode defaults printed in the page head (basic Consent Mode, where Google tags stay blocked until consent)
+
 = 1.1.2 =
 
 * IAB TCF stub in the page head: the TCF API (__tcfapi) is available before Google tags run, even when they load before the Okito banner script
@@ -193,6 +197,10 @@ Suggested wording for your Privacy Policy is available in WordPress under **Sett
 * Suggested privacy policy text for the site Privacy Policy page
 
 == Upgrade Notice ==
+
+= 1.1.3 =
+
+Adds a filter to switch the page-head Consent Mode defaults off for basic Consent Mode.
 
 = 1.1.2 =
 
