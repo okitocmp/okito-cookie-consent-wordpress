@@ -1,0 +1,104 @@
+/**
+ * Okito Cookie Consent — Admin CSS
+ */
+
+/* Dashboard & Settings cards */
+.okito-dashboard .okito-card,
+.okito-settings .okito-card {
+    background: #fff;
+    border: 1px solid #e2e4e7;
+    border-radius: 8px;
+    padding: 20px 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.okito-dashboard .okito-card h2,
+.okito-dashboard .okito-card h3,
+.okito-settings .okito-card h3 {
+    margin-top: 0;
+    color: #1e1e1e;
+}
+
+/* Setup steps */
+.okito-setup-steps {
+    padding-left: 20px;
+}
+.okito-setup-steps li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Status indicator */
+.okito-status-bar {
+    display: flex;
+    gap: 24px;
+    margin: 16px 0;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Helpers used by dashboard/settings templates */
+.okito-icon {
+    font-size: 28px;
+    margin-right: 8px;
+    color: #134a98;
+    vertical-align: middle;
+}
+.okito-notice-info {
+    border-left-color: #134a98 !important;
+}
+.okito-notice-success {
+    border-left-color: #81bc44 !important;
+}
+.okito-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+.okito-card-help {
+    margin-top: 24px;
+    background: #f8f9fa;
+}
+.okito-card-spaced {
+    margin-top: 20px;
+}
+.okito-card-narrow {
+    max-width: 700px;
+}
+.okito-card-secondary {
+    margin-top: 16px;
+    background: #f8f9fa;
+}
+.okito-status-active {
+    color: #46b450;
+    font-weight: bold;
+}
+.okito-status-inactive {
+    color: #dc3232;
+    font-weight: bold;
+}
+.okito-code-block {
+    background: #f6f7f7;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+.okito-action-row {
+    margin-left: 8px;
+}
+.okito-result {
+    margin-top: 8px;
+    display: none;
+}
+.okito-result-error {
+    color: #dc3232;
+}
+.okito-result-info {
+    color: #666;
+}
+.okito-result-success {
+    color: #46b450;
+}

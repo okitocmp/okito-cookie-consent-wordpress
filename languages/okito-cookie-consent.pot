@@ -1,0 +1,295 @@
+# Copyright (C) Okito
+# This file is distributed under the GPLv2 or later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Okito Cookie Consent 1.0.0\n"
+"Report-Msgid-Bugs-To: https://okito.com\n"
+"POT-Creation-Date: 2026-04-11 12:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: okito-cookie-consent\n"
+
+#: okito-cookie-consent.php
+msgid "Okito Cookie Consent"
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Okito"
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Dashboard"
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Settings"
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Insufficient permissions"
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Settings saved successfully"
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Please enter a Website Key first."
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Could not connect to Okito servers: "
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Connection successful! Your Website Key is valid."
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Website Key not found. Please check your key in the Okito dashboard."
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Unexpected response (HTTP %d). Please try again later."
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Please register your website in the Okito dashboard and copy the Website Key."
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "Cache cleared successfully!"
+msgstr ""
+
+#: okito-cookie-consent.php
+msgid "This plugin stores your Okito Website Key in the WordPress database. When the banner is enabled, it loads JavaScript from %1$sapp.okito.com%2$s to display and manage cookie consent. Visitor interactions with the banner may be processed by Okito as described on their website."
+msgstr ""
+
+#: includes/class-api-client.php
+msgid "No Website Key configured"
+msgstr ""
+
+#: admin/settings.php
+msgid "Settings saved!"
+msgstr ""
+
+#: admin/settings.php
+msgid "Okito Settings"
+msgstr ""
+
+#: admin/settings.php
+msgid "Website Key"
+msgstr ""
+
+#: admin/settings.php
+msgid "Test Connection"
+msgstr ""
+
+#: admin/settings.php
+msgid "Your unique Website Key from the Okito dashboard."
+msgstr ""
+
+#: admin/settings.php
+msgid "Get your key →"
+msgstr ""
+
+#: admin/settings.php
+msgid "Cookie Banner"
+msgstr ""
+
+#: admin/settings.php
+msgid "Enable cookie consent banner on this website"
+msgstr ""
+
+#: admin/settings.php
+msgid "When enabled, the Okito CDN script is injected into every page. The banner design and behavior are configured in the Okito dashboard."
+msgstr ""
+
+#: admin/settings.php
+msgid "Save Settings"
+msgstr ""
+
+#: admin/settings.php
+msgid "Clear Cache"
+msgstr ""
+
+#: admin/settings.php
+msgid "Injected Script Preview"
+msgstr ""
+
+#: admin/settings.php
+msgid "This script is added to &lt;head&gt; on every public page when the banner is enabled."
+msgstr ""
+
+#: admin/settings.php
+msgid "How it works"
+msgstr ""
+
+#: admin/settings.php
+msgid "Create an account at <a href=\"https://app.okito.com\" target=\"_blank\">app.okito.com</a>"
+msgstr ""
+
+#: admin/settings.php
+msgid "Add your website and customize your banner in the Okito dashboard"
+msgstr ""
+
+#: admin/settings.php
+msgid "Copy your Website Key and paste it above"
+msgstr ""
+
+#: admin/settings.php
+msgid "Enable the banner — done! 🎉"
+msgstr ""
+
+#: admin/settings.php
+msgid "Features included:"
+msgstr ""
+
+#: admin/settings.php
+msgid "Auto-language detection · Script blocking · Cookie scanner"
+msgstr ""
+
+#: admin/settings.php
+msgid "Testing..."
+msgstr ""
+
+#: admin/settings.php
+msgid "Testing connection..."
+msgstr ""
+
+#: admin/settings.php
+msgid "Network error. Please try again."
+msgstr ""
+
+#: admin/settings.php
+msgid "Clearing..."
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Setup Required"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Connect your Okito account to start showing cookie consent banners."
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Quick Setup — 2 Steps"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Get your Website Key"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Log in to the Okito dashboard, add your website, and copy the Website Key."
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Open Okito Dashboard →"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Paste it here"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Go to Settings and enter your Website Key to activate the cookie banner."
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Go to Settings"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Status:"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Active"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Inactive"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Enable now"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Website Key:"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Your Okito cookie consent banner is live! Visitors will see it on their first visit."
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Manage Banner"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Customize your banner design, position, colors, and content in the Okito dashboard."
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Open Banner Builder →"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "View Analytics"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Track consent rates, visitor interactions, and compliance metrics."
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Open Dashboard →"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Cookie Scanner"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Scan your website for cookies and categorize them automatically."
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Scan Cookies →"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Plugin Settings"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Update your Website Key or toggle the banner on/off."
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Script Integration"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "The following script is automatically injected into your site's &lt;head&gt; tag:"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "This single script handles everything: banner display, consent storage, Google Consent Mode, IAB TCF v2.3, and automatic language detection."
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Need Help?"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Okito Dashboard"
+msgstr ""
+
+#: admin/dashboard.php
+msgid "Website"
+msgstr ""
