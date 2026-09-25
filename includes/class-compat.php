@@ -21,13 +21,20 @@ class Okito_Compat
     /** Substrings that identify Okito's scripts (URL or inline content). */
     const PATTERNS = array('cdn.okito.com', 'okito-cookie-consent', 'okitoGpc', 'developer_id.dZGJiMm');
 
+    /**
+     * Consent plumbing of other plugins that must not wait for a user
+     * interaction either: the WP Consent API (Okito passes choices through it)
+     * and Site Kit's Consent Mode script (reads them).
+     */
+    const CONSENT_API_PATTERNS = array('wp-consent-api', 'googlesitekit-consent-mode');
+
     /** Attributes honored by Cloudflare, LiteSpeed, WP Rocket and others. */
     const SCRIPT_ATTRIBUTES = 'data-cfasync="false" data-no-optimize="1" data-no-defer="1" data-no-minify="1" nowprocket';
 
     public function __construct()
     {
         // WP Rocket.
-        add_filter('rocket_delay_js_exclusions', array($this, 'add_patterns'));
+        add_filter('rocket_delay_js_exclusions', array($this, 'add_delay_patterns'));
         add_filter('rocket_exclude_js', array($this, 'add_patterns'));
         add_filter('rocket_exclude_defer_js', array($this, 'add_patterns'));
         add_filter('rocket_excluded_inline_js_content', array($this, 'add_patterns'));
@@ -62,6 +69,17 @@ class Okito_Compat
     public function add_patterns($list)
     {
         return array_values(array_unique(array_merge((array) $list, self::PATTERNS)));
+    }
+
+    /**
+     * Delay-JS exclusions: Okito plus the consent APIs it talks to.
+     *
+     * @param mixed $list Existing exclusions.
+     * @return array
+     */
+    public function add_delay_patterns($list)
+    {
+        return array_values(array_unique(array_merge($this->add_patterns($list), self::CONSENT_API_PATTERNS)));
     }
 
     /**

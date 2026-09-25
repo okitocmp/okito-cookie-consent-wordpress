@@ -3,7 +3,7 @@
  * Plugin Name: Okito Cookie Consent
  * Plugin URI: https://app.okito.com
  * Description: Professional cookie consent management and GDPR/CCPA/LGPD compliance. Integrates with the Okito SaaS platform for enterprise-grade cookie banner management.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Okito
  * Author URI: https://okito.com
  * License: GPL v2 or later
@@ -23,7 +23,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Plugin constants
-define('OKITO_VERSION', '1.1.0');
+define('OKITO_VERSION', '1.1.1');
 define('OKITO_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('OKITO_PLUGIN_PATH', plugin_dir_path(__FILE__));
 // Overridable from wp-config.php (e.g. staging).

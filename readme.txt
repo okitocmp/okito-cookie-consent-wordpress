@@ -4,7 +4,7 @@ Tags: cookies, gdpr, consent, privacy, compliance
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -139,6 +139,10 @@ Suggested wording for your Privacy Policy is available in WordPress under **Sett
 
 == Changelog ==
 
+= 1.1.1 =
+
+* WP Rocket "Delay JavaScript": the WP Consent API and Site Kit's Consent Mode script are no longer delayed until the first interaction, so Site Kit receives the visitor's choice right away
+
 = 1.1.0 =
 
 * Tested with WordPress 7.1
@@ -172,6 +176,10 @@ Suggested wording for your Privacy Policy is available in WordPress under **Sett
 * Suggested privacy policy text for the site Privacy Policy page
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+
+Recommended for sites using WP Rocket together with Site Kit and the WP Consent API.
 
 = 1.1.0 =
 
